@@ -1,4 +1,5 @@
 import { useState, useEffect, ReactElement, FC } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useAuth0 } from '@auth0/auth0-react'
 import styled from '@emotion/styled'
 import axios from 'axios'
@@ -23,7 +24,8 @@ type ProfileProps = {
 }
 
 const Profile: FC = (props: ProfileProps): ReactElement => {
-  const notify = () => toast('Le profile a été mis à jour !')
+  const { t } = useTranslation()
+  const notify = () => toast(t('currentUserProfileUpdated'))
   const initialState = {}
   const { user, getAccessTokenSilently, logout } = useAuth0()
   const [userMetadata, setUserMetadata] = useState<ProfileProps>({})

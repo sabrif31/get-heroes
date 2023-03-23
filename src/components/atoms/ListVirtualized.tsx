@@ -11,11 +11,10 @@ type ListVirtualizedProps = {
 
 const ListVirtualized = (props: ListVirtualizedProps) => {
   return (
-    <DivAutoSizer>
+    <DivAutoSizer className={props.className}>
       <AutoSizer>
         {({ height, width }: Size) => (
           <List
-            className={props.className}
             height={height}
             itemCount={props.itemCount}
             itemSize={props.itemSize}
@@ -33,5 +32,4 @@ export default ListVirtualized
 
 const DivAutoSizer = styled.div`
   flex: 1 1 auto;
-  height: 350px;
 `

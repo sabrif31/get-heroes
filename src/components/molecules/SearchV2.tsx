@@ -65,7 +65,7 @@ const MySearch = (props: SearchProps) => {
           }}
         />
         {isOpen && (
-          <ItemContainer>
+          <ItemContainer className="ItemContainer">
             {hits.length > 0 ? (
               <ListVirtualized
                 className="List"
@@ -94,6 +94,7 @@ const NoResults = styled.p`
 const SearchContainer = styled.div`
   position: relative;
 `
+
 const ItemContainer = styled.div`
   position: absolute;
   z-index: 10;
@@ -107,25 +108,11 @@ const ItemContainer = styled.div`
   flex-wrap: wrap;
   max-height: 350px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  .item {
-    width: 100%;
-  }
-  .item .logo {
-    width: 12%;
-    float: left;
-  }
-  .item .name {
-    width: 88%;
-    float: left;
-  }
-  .item .name p {
-    margin-top: 2px;
+  .List {
+    height: 340px;
   }
 `
-const DivAutoSizer = styled.div`
-  flex: 1 1 auto;
-  height: 350px;
-`
+
 const ListItem = styled.div`
   display: flex;
   align-items: center;
@@ -143,9 +130,5 @@ const ListItem = styled.div`
   }
   :hover {
     background-color: #e9e9e9;
-    /*color: #fff;*/
-    .sub {
-      /*color: #fff;*/
-    }
   }
 `

@@ -26,14 +26,6 @@ const CustomButton: FC<ButtonProps> = (props: ButtonProps): ReactElement => {
     </FormButton>
   )
 }
-/*
-const defaultProps: ButtonProps = {
-    children: 'Save',
-    type: "button",
-    variant: "contained",
-};
-CustomButton.defaultProps = defaultProps;
-*/
 
 export default CustomButton
 
