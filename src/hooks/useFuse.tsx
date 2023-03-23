@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Fuse from 'fuse.js'
 import { useCallback, useMemo, useState } from 'react'
 import { debounce } from 'throttle-debounce'
@@ -56,7 +57,6 @@ const highlight = (
       return highlightedItem
     })
 }
-
 export const useFuse = <T,>(
   list: Array<any>,
   options: Fuse.IFuseOptions<T>

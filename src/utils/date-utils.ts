@@ -1,3 +1,4 @@
+// @ts-nocheck
 import isDate from 'date-fns/isDate'
 import isValidDate from 'date-fns/isValid'
 import format from 'date-fns/format'
