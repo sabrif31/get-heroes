@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 import ClickAwayListener from '@mui/base/ClickAwayListener'
-import { FixedSizeList as List } from 'react-window'
-import AutoSizer, { Size } from 'react-virtualized-auto-sizer'
 
 import { useFuse } from '../../hooks/useFuse'
 import data from '../../datas/datas.json'
 import CustomTextField from '../atoms/TextField'
 import Item from '../atoms/Item'
+import ListVirtualized from '../atoms/ListVirtualized'
 
 type Row = {
   index: number
@@ -68,22 +67,13 @@ const MySearch = (props: SearchProps) => {
         {isOpen && (
           <ItemContainer>
             {hits.length > 0 ? (
-              <DivAutoSizer>
-                {/* TODO: Create Autosizer Custom to Atoms */}
-                <AutoSizer>
-                  {({ height, width }: Size) => (
-                    <List
-                      className="List"
-                      height={height}
-                      itemCount={hits.length}
-                      itemSize={85}
-                      width={width}
-                    >
-                      {Row}
-                    </List>
-                  )}
-                </AutoSizer>
-              </DivAutoSizer>
+              <ListVirtualized
+                className="List"
+                itemCount={hits.length}
+                itemSize={85}
+              >
+                {Row}
+              </ListVirtualized>
             ) : (
               <NoResults>No results</NoResults>
             )}
