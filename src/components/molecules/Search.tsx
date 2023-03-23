@@ -9,6 +9,7 @@ import Item from '../atoms/Item'
 import CustomTextField from '../atoms/TextField'
 
 import data from '../../datas/datas.json'
+import ListVirtualized from '../atoms/ListVirtualized'
 
 type Items = {
   activity: string
@@ -140,21 +141,13 @@ const Search = (props: SearchProps) => {
         />
         {isOpen && (
           <ItemContainer>
-            <DivAutoSizer>
-              <AutoSizer>
-                {({ height, width }: Size) => (
-                  <List
-                    className="List"
-                    height={height}
-                    itemCount={searchDataHighlight.length}
-                    itemSize={85}
-                    width={width}
-                  >
-                    {Row}
-                  </List>
-                )}
-              </AutoSizer>
-            </DivAutoSizer>
+            <ListVirtualized
+              className="List"
+              itemCount={searchDataHighlight.length}
+              itemSize={85}
+            >
+              {Row}
+            </ListVirtualized>
           </ItemContainer>
         )}
       </SearchContainer>
