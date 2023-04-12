@@ -57,6 +57,7 @@ const AbletonProjectFiles = () => {
 
   const Row = ({ index, style }: Row) => (
     <ListItem
+      className={index % 2 ? 'list-item-odd' : 'list-item-even'}
       tabIndex={index}
       onClick={() =>
         openProject({
@@ -81,7 +82,13 @@ const AbletonProjectFiles = () => {
 
   return (
     <AbletonProjectFilesContainer>
-      <ListItem>
+      <ListItem
+        style={{
+          borderBottom: 'none !important',
+          border: '1px solid #e0e0e0',
+          width: '98.4%',
+        }}
+      >
         <div style={{ width: '100%' }}>
           <div>📋FileName</div>
           <div
@@ -93,7 +100,7 @@ const AbletonProjectFiles = () => {
           </div>
           <div
             style={{
-              width: '268px',
+              width: '250px',
             }}
           >
             📅 Date
@@ -132,8 +139,8 @@ const AbletonProjectFilesContainer = styled.div`
 const ItemContainer = styled.div`
   position: absolute;
   z-index: 10;
-  border-left: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
+  /*border-left: 1px solid #e0e0e0;*/
+  border: 1px solid #e0e0e0;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -149,12 +156,20 @@ const ListItem = styled.div`
   align-items: center;
   padding: 10px;
   cursor: pointer;
+  &.list-item-odd {
+    background-color: #f5f5f5;
+  }
+  &.list-item-even {
+    background-color: #fff;
+  }
+  /*
   :nth-of-type(odd) {
     background-color: #f5f5f5;
   }
   :nth-of-type(even) {
     background-color: #fff;
   }
+  */
   .sub {
     color: #686980;
     font-size: 12px;
