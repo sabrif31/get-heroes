@@ -11,7 +11,7 @@
     "prettier": "npx prettier --write src/**/*.{js,jsx,ts,tsx,json,css,scss,md} && npm run prettier:server",
     "prettier:server": "npx prettier --write server/**/*.{js,jsx,ts,tsx,json,css,scss,md}",
     "predeploy": "npm run build",
-    "deploy": "gh-pages2 -d dist",
+    "deploy": "gh-pages -d dist",
     "server": "node ./server/index.js"
   },
   "homepage": "<https://sabrif31.github.io/get-heroes>",
