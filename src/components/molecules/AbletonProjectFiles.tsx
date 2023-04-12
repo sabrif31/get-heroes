@@ -133,7 +133,7 @@ const NoResults = styled.p`
 
 const AbletonProjectFilesContainer = styled.div`
   position: relative;
-  height: 600px;
+  height: 400px;
 `
 
 const ItemContainer = styled.div`
@@ -147,7 +147,7 @@ const ItemContainer = styled.div`
   flex-wrap: wrap;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   .List {
-    height: 600px;
+    height: 400px;
   }
 `
 
