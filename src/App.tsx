@@ -35,7 +35,7 @@ const Auth0ProviderWithRedirectCallback = (
 
 const App: FC = (): ReactElement => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/get-heroes/">
       <Auth0ProviderWithRedirectCallback
         domain={import.meta.env.VITE_AUTH0_DOMAIN}
         clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
