@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://sabrif31.github.io/get-heroes",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run dev\"",
     "dev": "vite --open",
