@@ -2,6 +2,7 @@ import { FC, ReactElement } from 'react'
 import BlockBox from '../organisms/Box'
 import Search from '../molecules/Search'
 import MySearch from '../molecules/SearchV2'
+import AbletonProjectFiles from '../molecules/AbletonProjectFiles'
 
 const SearchPage: FC = (): ReactElement => {
   return (
@@ -10,6 +11,8 @@ const SearchPage: FC = (): ReactElement => {
       <Search keys={['activity', 'category', 'sector']} />
       <h2>Second test with hook</h2>
       <MySearch keys={['activity', 'category', 'sector']} />
+      <h2>Ableton Project Files</h2>
+      <AbletonProjectFiles />
     </BlockBox>
   )
 }
