@@ -14,7 +14,6 @@
     "deploy": "gh-pages -d dist",
     "server": "node ./server/index.js"
   },
-  "homepage": "https://sabrif31.github.io",
   "dependencies": {
     "@auth0/auth0-react": "^2.0.0",
     "@emotion/react": "^11.10.5",
