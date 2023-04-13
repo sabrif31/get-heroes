@@ -12,18 +12,6 @@ import GlobalStyles from '@mui/material/GlobalStyles'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 
-/*
-import ProgressLinear from '../atoms/ProgressLinear'
-import ProfilePage from './ProfilePage'
-import HomePage from './Home'
-import LoginPage from './LoginPage'
-import CalendarPage from './CalendarPage'
-import CustomButton from '../atoms/Button'
-import NavRoute from '../molecules/NavRoute'
-import RegisterForm from '../molecules/RegisterForm'
-import SearchPage from './SearchPage'
-*/
-
 const ProgressLinear = loadable(() => import('../atoms/ProgressLinear'))
 const ProfilePage = loadable(() => import('./ProfilePage'))
 const HomePage = loadable(() => import('./Home'))
