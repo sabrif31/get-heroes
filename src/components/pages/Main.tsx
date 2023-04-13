@@ -2,6 +2,7 @@ import { FC, ReactElement } from 'react'
 import styled from '@emotion/styled'
 import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react'
 import { Route, Routes } from 'react-router-dom'
+import loadable from '@loadable/component'
 
 import AppBar from '@mui/material/AppBar'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -11,6 +12,7 @@ import GlobalStyles from '@mui/material/GlobalStyles'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 
+/*
 import ProgressLinear from '../atoms/ProgressLinear'
 import ProfilePage from './ProfilePage'
 import HomePage from './Home'
@@ -20,6 +22,17 @@ import CustomButton from '../atoms/Button'
 import NavRoute from '../molecules/NavRoute'
 import RegisterForm from '../molecules/RegisterForm'
 import SearchPage from './SearchPage'
+*/
+
+const ProgressLinear = loadable(() => import('../atoms/ProgressLinear'))
+const ProfilePage = loadable(() => import('./ProfilePage'))
+const HomePage = loadable(() => import('./Home'))
+const LoginPage = loadable(() => import('./LoginPage'))
+const CalendarPage = loadable(() => import('./CalendarPage'))
+const CustomButton = loadable(() => import('../atoms/Button'))
+const NavRoute = loadable(() => import('../molecules/NavRoute'))
+const RegisterForm = loadable(() => import('../molecules/RegisterForm'))
+const SearchPage = loadable(() => import('./SearchPage'))
 
 const ProtectedRoute = (args: any) => {
   const Component = withAuthenticationRequired(args.component, args)
