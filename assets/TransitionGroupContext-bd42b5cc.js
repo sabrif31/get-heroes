@@ -1,0 +1,1 @@
+import{r as e,D as s}from"./index-5f314384.js";const a=typeof window<"u"?e.useLayoutEffect:e.useEffect,o=a;function u(t){const n=e.useRef(t);return o(()=>{n.current=t}),e.useCallback((...c)=>(0,n.current)(...c),[])}const f=s.createContext(null);export{f as T,o as a,u};

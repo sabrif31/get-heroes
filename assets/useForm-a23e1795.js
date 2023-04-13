@@ -1,0 +1,1 @@
+import{r as s}from"./index-5f314384.js";const m=(e,n)=>{const[a,o]=s.useState(n);return{onChange:t=>{o({...a,[t.target.name]:t.target.value})},onSubmit:async t=>{t.preventDefault(),await e()},values:a}};export{m as u};
