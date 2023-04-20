@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography'
 import GlobalStyles from '@mui/material/GlobalStyles'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
+import Editor from '../atoms/RoosterJs/RoosterComponent'
 
 const ProgressLinear = loadable(() => import('../atoms/ProgressLinear'))
 const ProfilePage = loadable(() => import('./ProfilePage'))
@@ -21,6 +22,7 @@ const CustomButton = loadable(() => import('../atoms/Button'))
 const NavRoute = loadable(() => import('../molecules/NavRoute'))
 const RegisterForm = loadable(() => import('../molecules/RegisterForm'))
 const SearchPage = loadable(() => import('./SearchPage'))
+const RoosterJsPage = loadable(() => import('./RoosterJsPage'))
 
 const ProtectedRoute = (args: any) => {
   const Component = withAuthenticationRequired(args.component, args)
@@ -93,6 +95,7 @@ const Main: FC = (): ReactElement => {
             element={<ProtectedRoute component={ProfilePage} />}
           />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/roosterjs" element={<RoosterJsPage />} />
         </Routes>
       </Container>
 

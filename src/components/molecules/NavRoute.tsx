@@ -19,6 +19,7 @@ const NavRoute: FC = (): ReactElement => {
     { navigate: '/calendar', label: 'calendar', isProtected: true },
     { navigate: '/profile', label: 'Profile', isProtected: true },
     { navigate: '/search', label: 'Search', isProtected: false },
+    { navigate: '/roosterjs', label: 'Roosterjs', isProtected: false },
   ])
 
   return (
