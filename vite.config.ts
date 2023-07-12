@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   // base: '/get-heroes/',
   plugins: [react()],
-  base: "/react-gh-pages/",
+  base: '/',
 })
