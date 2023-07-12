@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react'
 import BlockBox from '../organisms/Box'
-import RoosterEditor from '../atoms/RoosterJs/React'
+// import RoosterEditor from '../atoms/RoosterJs/React'
 import styled from '@emotion/styled'
 import { Typography } from '@mui/material'
 
@@ -8,7 +8,7 @@ const RoosterJsPage: FC = (): ReactElement => {
   return (
     <BlockBox>
       <FormTypography variant={'h4'}>RoosterJS</FormTypography>
-      <RoosterEditor />
+      {/* <RoosterEditor /> */}
     </BlockBox>
   )
 }
