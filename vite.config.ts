@@ -2,8 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  // base: '/get-heroes/',
-  base: '/get-heroes/',
-  plugins: [react()],
+export default defineConfig(({ command }) => {
+  const config = {
+    base: '/',
+    plugins: [react()],
+  }
+  if (command !== 'serve') {
+    config.base = '/get-heroes/'
+  }
+  return config
 })
