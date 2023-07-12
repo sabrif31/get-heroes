@@ -20,6 +20,7 @@ const NavRoute: FC = (): ReactElement => {
     { navigate: '/profile', label: 'Profile', isProtected: true },
     { navigate: '/search', label: 'Search', isProtected: false },
     { navigate: '/roosterjs', label: 'Roosterjs', isProtected: false },
+    { navigate: '/lexical', label: 'Lexical', isProtected: false },
   ])
 
   return (

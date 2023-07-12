@@ -1,6 +1,12 @@
+import { ComponentType } from 'react'
 import styled from '@emotion/styled'
-import { FixedSizeList as List } from 'react-window'
+import {
+  FixedSizeListProps,
+  FixedSizeList as _FixedSizeList,
+} from 'react-window'
 import AutoSizer, { Size } from 'react-virtualized-auto-sizer'
+
+const FixedSizeList = _FixedSizeList as ComponentType<FixedSizeListProps | Size>
 
 type ListVirtualizedProps = {
   className: string
@@ -14,14 +20,14 @@ const ListVirtualized = (props: ListVirtualizedProps) => {
     <DivAutoSizer className={props.className}>
       <AutoSizer>
         {({ height, width }: Size) => (
-          <List
+          <FixedSizeList
             height={height}
             itemCount={props.itemCount}
             itemSize={props.itemSize}
             width={width}
           >
             {props.children}
-          </List>
+          </FixedSizeList>
         )}
       </AutoSizer>
     </DivAutoSizer>

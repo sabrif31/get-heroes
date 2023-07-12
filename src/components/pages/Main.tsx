@@ -12,6 +12,7 @@ import GlobalStyles from '@mui/material/GlobalStyles'
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import Editor from '../atoms/RoosterJs/RoosterComponent'
+import LexicalPage from './LexicalPage'
 
 const ProgressLinear = loadable(() => import('../atoms/ProgressLinear'))
 const ProfilePage = loadable(() => import('./ProfilePage'))
@@ -96,6 +97,7 @@ const Main: FC = (): ReactElement => {
           />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/roosterjs" element={<RoosterJsPage />} />
+          <Route path="/lexical" element={<LexicalPage />} />
         </Routes>
       </Container>
 
