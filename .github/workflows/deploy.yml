@@ -42,12 +42,15 @@ jobs:
 #      - run: yarn install && yarn build
 
       - name: Install dependencies
-        run: npm i --legacy-peer-deps
+        run: npm ci
+        # run: npm i --legacy-peer-deps
 
       - name: Build
         run: npm run build
         env:
           CI: true
+          VITE_AUTH0_DOMAIN: dev-ng6aspsfdhghv3u2.us.auth0.com
+          VITE_AUTH0_CLIENT_ID: 1YhSGigCmNj3xSkBdA89xwdbgaRN8IVD
           VITE_ENV: prod
 
       - name: Setup Pages
